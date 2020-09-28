@@ -44,7 +44,7 @@ public void i_enter_the_first_name_as(String string) throws InterruptedException
 }
 @When("I Enter the last name as {string}")
 public void i_enter_the_last_name_as(String string) {
-	driver.findElement(By.id("registration_lastname")).sendKeys("s4");
+	driver.findElement(By.id("registration_lastname")).sendKeys("s5");
 }
 @When("I Enter the email as {string}")
 public void i_enter_the_email_as(String string) {
@@ -54,7 +54,7 @@ public void i_enter_the_email_as(String string) {
 
 @When("I Enter the user name as {string}")
 public void i_enter_the_user_name_as(String string) {
-	 driver.findElement(By.id("username")).sendKeys("RS_123");
+	 driver.findElement(By.id("username")).sendKeys("RS_124");
 }
 @When("I Enter the pass as {string}")
 public void i_enter_the_pass_as(String string) {
@@ -71,6 +71,7 @@ public void i_click_on_the_register_button() throws InterruptedException {
 }
 @Then("I should see the message")
 public void i_should_see_the_message() throws InterruptedException {
+	   Thread.sleep(9000);
 	   String msg1 = driver.findElement(By.xpath("/html[1]/body[1]/main[1]/section[1]/div[1]/div[2]/div[1]/p[1]")).getText();
 	   System.out.println(msg1);
 	   Thread.sleep(2000);
